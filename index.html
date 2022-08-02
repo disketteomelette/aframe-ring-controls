@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!--- Creado por jcrueda --- github.com/disketteomelette --->
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+    <script src="aframe-ring-controls.min.js"></script>
+    <script language="javascript">
+    alert("Welcome to this test! Look down with mouse and put cursor over elements of the ring you'll see on the bottom - github.com/disketteomelette");
+    </script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity
+        geometry="primitive: plane"
+        rotation="270 0 0"
+        scale="20 20 20"
+        id="suelo"
+        material="src: chess.png"
+      ></a-entity>
+
+      <!--- BEGIN -- COPYPASTE THIS TO YOUR PROJECT FOR RING VISUALIZATION --->
+      <a-entity id="vista">
+        <a-entity id="controles" scale="0.6 0.6 0.6" position="0 1 0">
+          <a-entity
+            id="ring"
+            scale="2 2 2"
+            geometry="primitive: ring; radiusInner: 0.94; radiusOuter: 1.04"
+            rotation="270 0 0"
+            position="0 0.033 0"
+            material="color: purple; roughness: 0.09"
+          ></a-entity>
+
+          <a-entity
+            id="bolas"
+            position="0 0.15 0"
+            animation="property: position; to: 0 -0.05 -0; dur: 700; easing: linear; loop: true; dir: alternate"
+          >
+            <a-sphere
+              n
+              id="n"
+              position="0 0 -2"
+              scale="0.1 0.1 0.1"
+              material="color: yellow;"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              s
+              id="s"
+              position="0 0 2"
+              scale="0.1 0.1 0.1"
+              material="color: yellow;"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              e
+              id="e"
+              position="-2 0 0"
+              scale="0.1 0.1 0.1"
+              material="color: yellow;"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              o
+              id="o"
+              position="2 0 0"
+              scale="0.1 0.1 0.1"
+              material="color: yellow;"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              ne
+              id="ne"
+              position="-1.45 0 -1.45"
+              scale="0.1 0.1 0.1"
+              material="color: pink"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              no
+              id="no"
+              position="1.45 0 -1.45"
+              scale="0.1 0.1 0.1"
+              material="color: pink"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              se
+              id="se"
+              position="1.45 0 1.45"
+              scale="0.1 0.1 0.1"
+              material="color: pink"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-sphere
+              so
+              id="so"
+              position="-1.45 0 1.45"
+              scale="0.1 0.1 0.1"
+              material="color: pink"
+              geometry="primitive: icosahedron"
+              animation="property: rotation; to: 359 359 359; dur: 3000; easing: linear; loop: true"
+            ></a-sphere>
+            <a-entity
+              u
+              id="goup"
+              geometry="primitive: cone"
+              material="color: green;"
+              position="-0.5 0.084 -1.916"
+              scale="0.073 0.368 0.073"
+            ></a-entity>
+            <a-entity
+              d
+              id="godown"
+              geometry="primitive: cone"
+              material="color: green;"
+              position="0.462 0.084 -1.916"
+              scale="0.073 0.368 0.073"
+              rotation="0 0.16 -180"
+            ></a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-camera position="0 3 0" wasd-controls-enabled="false">
+          <a-entity
+            cursor="fuse: true; fuseTimeout: 50"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.019; radiusOuter: 0.02"
+            material="color: yellow; shader: flat"
+          ></a-entity>
+        </a-camera>
+      </a-entity>
+      <!--- END OF RING VISUALIZATION --->
+    </a-scene>
+  </body>
+</html>
+
