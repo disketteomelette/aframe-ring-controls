@@ -13,5 +13,7 @@ Please read carefully index.html to see a sample of the use of components.
 - NO: Northwest
 - SE: Southeast
 - SO: Southwest
+- U: Up
+- D: Down
 
 Easy!
