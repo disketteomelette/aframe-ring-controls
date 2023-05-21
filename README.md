@@ -1,5 +1,5 @@
-# aframe-ring-controls ![aframe-ring-controls-sample](https://github.com/disketteomelette/aframe-ring-controls/blob/main/samplevideo.gif?raw=true)
-A-frame.js component to move the camera just looking a ring surrounding you! 
+# aframe-ring-controls
+A-frame.js component to move the camera just looking a ring surrounding you!  ![aframe-ring-controls-sample](https://github.com/disketteomelette/aframe-ring-controls/blob/main/samplevideo.gif?raw=true)
 # wow!
 Glitch: https://confirmed-sparkly-judge.glitch.me
 
